@@ -1,4 +1,4 @@
-package com.duheng.concurrent.KouDingLang.ProductConsum._03;
+package com.duheng.concurrent.Wolfcode.ProductConsum._03;
 
 /*************************
  Author: 杜衡

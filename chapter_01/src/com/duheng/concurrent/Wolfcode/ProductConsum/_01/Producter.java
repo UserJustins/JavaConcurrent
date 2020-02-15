@@ -1,4 +1,4 @@
-package com.duheng.concurrent.KouDingLang.ProductConsum._02;
+package com.duheng.concurrent.Wolfcode.ProductConsum._01;
 
 /*************************
  Author: 杜衡
@@ -11,7 +11,7 @@ public class Producter implements Runnable{
      */
     private ShareResource source = null;
 
-    public Producter(ShareResource source){
+    public Producter(ShareResource  source){
         this.source = source;
 
     }
@@ -23,26 +23,15 @@ public class Producter implements Runnable{
      */
     @Override
     public void run() {
-        //③生产者拿到了锁进入代码块中
-        synchronized (source){
 
-            for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++) {
 
                 if (i % 2==0) {
                     source.push("杜衡","男");
                 }else{
                     source.push("姜莹","女");
                 }
-                //④生产完成后，唤醒消费者
-                source.notifyAll();
-                try {
-                    source.wait();//⑤并且要释放掉锁，这样阻塞状态的消费者就能拿到锁
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
 
         }
-
 }
 }

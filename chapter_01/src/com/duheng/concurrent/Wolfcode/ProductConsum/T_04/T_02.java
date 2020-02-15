@@ -1,4 +1,4 @@
-package com.duheng.concurrent.KouDingLang.ProductConsum.T_04;
+package com.duheng.concurrent.Wolfcode.ProductConsum.T_04;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;

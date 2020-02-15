@@ -1,4 +1,4 @@
-package com.duheng.concurrent.KouDingLang.single;
+package com.duheng.concurrent.Wolfcode.single;
 
 /*************************
  Author: 杜衡

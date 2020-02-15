@@ -1,4 +1,4 @@
-package com.duheng.concurrent.KouDingLang.ProductConsum._03;
+package com.duheng.concurrent.Wolfcode.ProductConsum._01;
 
 /*************************
  Author: 杜衡
@@ -22,7 +22,14 @@ public class Consumer implements Runnable{
     @Override
     public void run() {
         for (int i = 0; i < 10; i++) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             source.pop();
+
+
         }
     }
 }
